@@ -22,28 +22,65 @@ import arrow_right from "./right_arrow.png";
 import arrow_left from "./left_arrow.png";
 import spotify_logo from "./spotify_logo.png";
 import clock_icon from "./clock_icon.png";
-import img1 from "./img1.jpg";
-import img2 from "./img2.jpg";
-import img3 from "./img3.jpg";
-import img4 from "./img4.jpg";
-import img5 from "./img5.jpg";
-import img6 from "./img6.jpg";
-import img7 from "./img7.jpg";
-import img8 from "./img8.jpg";
+import img1 from "./noMeDoy.jpg";
+import img2 from "./unAnio.jpg";
+import img3 from "./promesa.jpg";
+import img4 from "./reik.jpg";
+import img5 from "./micro.jpg";
+import img6 from "./can.jpg";
+import img7 from "./bajo_el_agua.jpg";
+import img8 from "./unAnio.jpg";
 import img11 from "./img11.jpg";
 import img12 from "./img12.jpg";
 import img13 from "./img13.jpg";
 import img14 from "./img14.jpg";
 import img15 from "./img15.jpg";
 import img16 from "./img16.jpg";
-import song1 from "./song1.mp3";
-import song2 from "./song2.mp3";
-import song3 from "./song3.mp3";
-import song4 from "./song4.mp3";
-import song5 from "./song5.mp3";
-import song6 from "./song6.mp3";
-import song7 from "./song7.mp3";
-import song8 from "./song8.mp3";
+import img17 from "./bajo_el_agua.jpg";
+import img18 from "./destino_casualidad.jpg";
+import img19 from "./teAmo.jpg";
+import img20 from "./amorBueno.jpg";
+import img21 from "./todoCambio.jpg";
+import img22 from "./r2.jpg";
+import img23 from "./mana.jpg";
+import img24 from "./promesa.jpg";
+import img25 from "./reik.jpg";
+import img26 from "./humble.jpg";
+import img27 from "./sinBandera.jpg";
+import img28 from "./realB.jpg";
+import img29 from "./beele.jpg";
+import img30 from "./omar.jpg";
+import img31 from "./bab.jpg";
+import imgD from "./dedicado.jpeg";
+import imgY from "./dedico.jpeg";
+import imgC from "./chill.jpeg";
+
+
+
+import song1 from "./noMeDoy.mp3";
+import song2 from "./unAnio.mp3";
+import song3 from "./promesa.mp3";
+import song4 from "./creoTi.mp3";
+import song5 from "./cafune.mp3";
+import song6 from "./querer.mp3";
+import song7 from "./otraVez.mp3";
+import song8 from "./cristina.mp3";
+import song9 from "./9.mp3";
+import c from "./destino.mp3";
+import song11 from "./teAmo.mp3";
+import song12 from "./amorBueno.mp3";
+import song13 from "./TodoCambio.mp3";
+import song14 from "./ven.mp3";
+import song15 from "./luz.mp3";
+import song16 from "./patada.mp3";
+import song17 from "./jardin.mp3";
+import song18 from "./vivo.mp3";
+import song19 from "./teVi.mp3";
+import song20 from "./aMi.mp3";
+import song21 from "./loco.mp3";
+import song22 from "./omar.mp3";
+import song23 from "./boda.mp3";
+import song24 from "./sorry.mp3";
 
 export const assets = {
   bell_icon,
@@ -75,119 +112,244 @@ export const assets = {
 export const albumsData = [
   {
     id: 0,
-    name: "Top 50 Global",
-    image: img8,
-    desc: "Weekly top tracks worldwide.",
-    bgColor: "#2a4365",
-  },
-  {
-    id: 1,
-    name: "Top 50 Songs Sleep",
-    image: img6,
-    desc: "Weekly top tracks for relaxation.",
+    name: "Canciones dedicadas",
+    image: imgD,
+    desc: "Las canciones que me ha dedicado.",
     bgColor: "#22543d",
   },
   {
+    id: 1,
+    name: "Playlist que le dedico",
+    image: imgY,
+    desc: "Canciones que le pueden gustar.",
+    bgColor: "#2a4365",
+  },
+  {
     id: 2,
-    name: "Trending Meditation",
-    image: img13,
-    desc: "Current popular meditation tracks.",
+    name: "Playlist de chill",
+    image: imgC,
+    desc: "Un poco de todo jjj",
     bgColor: "#742a2a",
-  },
-  {
-    id: 3,
-    name: "Trending Global",
-    image: img16,
-    desc: "Top trending tracks globally.",
-    bgColor: "#44337a",
-  },
-  {
-    id: 4,
-    name: "Mega Hits",
-    image: img11,
-    desc: "Biggest hits right now.",
-    bgColor: "#234e52",
-  },
-  {
-    id: 5,
-    name: "Happy Favorites",
-    image: img15,
-    desc: "Top tracks to brighten your mood.",
-    bgColor: "#744210",
   },
 ];
 
 export const songsData = [
   {
     id: 0,
-    name: "Hmyn For The Weekend",
+    name: "No me doy por vencido",
     image: img1,
     file: song1,
-    author: "Coldplay",
+    author: "Luis Fonsi",
     desc: "Feeling high, like we're kings of the weekend",
-    duration: "4:22",
+    duration: "3:53",
   },
   {
     id: 1,
-    name: "DJ Joanna - Bos Muda",
+    name: "Un año",
     image: img2,
     file: song2,
-    author: "",
+    author: "Sebastian Yatra",
     desc: "Chasing dreams, breaking schemes, bossing up every day",
-    duration: "5:33",
+    duration: "3:22",
   },
   {
     id: 2,
-    name: "Locked Away",
+    name: "La promesa",
     image: img3,
     file: song3,
-    author: "R. City featuring Adam Levine",
-    desc: "Will you still love me when I'm down and out?",
-    duration: "4:25",
+    author: "Melendi",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "3:31",
   },
   {
     id: 3,
-    name: "Starboy",
+    name: "Creo en ti",
     image: img4,
     file: song4,
-    author: "The Weeknd",
-    desc: "Living large, I'm a starboy",
-    duration: "4:34",
+    author: "Reik",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "2:43",
   },
   {
     id: 4,
-    name: "Viva La Vida",
+    name: "Cafuné",
     image: img5,
     file: song5,
-    author: "Coldplay",
-    desc: "I used to rule the world, now I'm just a ghost",
-    duration: "4:02",
+    author: "Micro THD",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "4:13",
   },
   {
     id: 5,
-    name: "Pompeii",
-    image: img14,
-    file: song6,
-    author: "Bastille",
-    desc: "Still the same, in the same place",
-    duration: "3:52",
+    name: "Una y otra vez",
+    image: img7,
+    file: song7,
+    author: "Manuel Medrano",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "3:04",
   },
   {
     id: 6,
-    name: "I Love You 3000",
-    image: img7,
-    file: song7,
-    author: "Stephanie Poetri",
-    desc: "You're my everything, you’re my all",
-    duration: "3:30",
+    name: "Cristina",
+    image: img8,
+    file: song8,
+    author: "Sebastian Yatra",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "3:21",
   },
   {
     id: 7,
-    name: "Angel Baby",
-    image: img12,
-    file: song8,
-    author: "Troye Sivan",
-    desc: "I'm a sucker for the way you move",
-    duration: "3:41",
+    name: "Patadas de Ahogado",
+    image: img26,
+    file: song16,
+    author: "Humbe ",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "3:44",
+  },
+  {
+    id: 8,
+    name: "Tu Jardín Con Enanitos",
+    image: img3,
+    file: song17,
+    author: "Melendi ",
+    desc: "Chasing dreams, breaking schemes, bossing up every day",
+    duration: "4:27",
+  },
+  {
+    id: 9,
+    name: "En Vivo y En Directo",
+    image: img22,
+    file: song18,
+    author: "Fonseca",
+    desc: "P.",
+    duration: "4:22",
+  },
+  {
+    id: 10,
+    name: "Te vi venir",
+    image: img27,
+    file: song19,
+    author: "Sin Bandera",
+    desc: "P.",
+    duration: "4:22",
+  },
+];
+export const songsDataDedicada = [
+  {
+    id: 100,
+    name: "Destino o Casualidad",
+    image: img18,
+    file: c,
+    author: "Melendi",
+    desc: "Destino o Casualidad",
+    duration: "4:46",
+  },
+  {
+    id: 101,
+    name: "Bajo el agua",
+    image: img17,
+    file: song9,
+    author: "Manuel Medrano",
+    desc: "Bajo el agua",
+    duration: "3:50",
+  },
+  {
+    id: 102,
+    name: "Te amo y más",
+    image: img19,
+    file: song11,
+    author: "Gustavo Santaolalla",
+    desc: "Te amo y más",
+    duration: "2:36",
+  },
+
+];
+
+
+export const songsForYou =[
+  {
+    id: 200,
+    name: "Amor del bueno",
+    image: img20,
+    file: song12,
+    author: "Reyli Barba",
+    desc: "Porque desde que llegaste, todo es más bonito a mi lado.",
+    duration: "4:22",
+  },
+  {
+    id: 201,
+    name: "Todo cambió",
+    image: img21,
+    file: song13,
+    author: "Camila",
+    desc: "Porque desde que te vi, supe que mi vida nunca volvería a ser la misma.",
+    duration: "4:22",
+  },
+  {
+    id: 202,
+    name: "Ven",
+    image: img22,
+    file: song14,
+    author: "Fonseca",
+    desc: "Porque cada vez que estamos lejos, solo quiero que vuelvas a mí.",
+    duration: "3:19",
+  },
+  {
+    id: 203,
+    name: "Bendita tu luz",
+    image: img23,
+    file: song15,
+    author: "Maná",
+    desc: "Porque encontrarte fue lo mejor que me ha pasado.",
+    duration: "3:13",
+  },
+];
+
+export const songChill = [
+  
+  {
+    id: 300,
+    name: " A mí",
+    image: img28,
+    file: song20,
+    author: "Rels B",
+    desc: "P",
+    duration: "3:53",
+  },
+  {
+    id: 301,
+    name: "Loco",
+    image: img29,
+    file: song21,
+    author: "Beele",
+    desc: "P",
+    duration: "3:24",
+  },
+  {
+    id: 302,
+    name: "Dutty Love",
+    image: img30,
+    file: song22,
+    author: "Don Omar",
+    desc: "P",
+    duration: "4:46",
+  },
+  {
+    id: 303,
+    name: "Tu boda",
+    image: img19,
+    file: song23,
+    author: "Fuerza Regida",
+    desc: "P",
+    duration: "3:46",
+  },
+  {
+    id: 304,
+    name: "Sorry",
+    image: img31,
+    file: song24,
+    author: "Bab Bunny",
+    desc: "P",
+    duration: "2:43",
   },
 ];

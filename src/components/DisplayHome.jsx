@@ -2,7 +2,7 @@
 import Navbar from "./Navbar";
 import { albumsData } from "../assets/assets";
 import CardItem from "./CardItem";
-import { songsData } from "../assets/assets";
+import { songsData , songsForYou} from "../assets/assets";
 import SongItem from "./SongItem";
 
 function DisplayHome() {
@@ -10,7 +10,7 @@ function DisplayHome() {
     <>
       <Navbar />
       <div className="mb-4">
-        <h1 className="my-5 font-bold text-2xl">Featured Charts</h1>
+        <h1 className="my-5 font-bold text-2xl">Creados para ti</h1>
         <div className="flex overflow-auto">
           {albumsData.map((items, index) => (
             <CardItem
@@ -24,9 +24,9 @@ function DisplayHome() {
         </div>
       </div>
       <div className="mb-4">
-        <h1 className="my-5 font-bold text-2xl">Today`s biggest hits</h1>
+        <h1 className="my-5 font-bold text-2xl">Canciones que me recuerda a usted</h1>
         <div className="flex overflow-auto">
-          {songsData.map((items, index) => (
+          {songsForYou.map((items, index) => (
             <SongItem
               key={index}
               name={items.name}

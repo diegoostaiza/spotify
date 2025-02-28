@@ -1,5 +1,5 @@
 import { createContext, useEffect, useRef, useState } from "react";
-import { songsData } from "../assets/assets";
+import { albumsData, songsData, songsDataDedicada, songsForYou , songChill} from "../assets/assets";
 
 export const PlayContext = createContext();
 
@@ -8,18 +8,28 @@ const PlayContextProvider = (props) => {
   const seekBg = useRef();
   const seekBar = useRef();
 
+  // Estado para almacenar la lista de canciones actual
+  const [songList, setSongList] = useState(songsData);
   const [track, setTrack] = useState(songsData[0]);
   const [playStatus, setPlayStatus] = useState(false);
   const [time, setTime] = useState({
-    currentTime: {
-      second: 0,
-      minute: 0,
-    },
-    totalTime: {
-      second: 0,
-      minute: 0,
-    },
+    currentTime: { second: 0, minute: 0 },
+    totalTime: { second: 0, minute: 0 },
   });
+
+  // Función para cambiar la lista de canciones según el álbum seleccionado
+  const updateSongList = (albumId) => {
+    const album = albumsData.find((a) => a.id === parseInt(albumId));
+    if (!album) return;
+
+    if (album.name === "Canciones dedicadas") {
+      setSongList(songsDataDedicada);
+      setTrack(songsDataDedicada[0]); // Iniciar con la primera canción del álbum
+    } else {
+      setSongList(songsData);
+      setTrack(songsData[0]);
+    }
+  };
 
   const play = () => {
     audioRef.current.play();
@@ -31,42 +41,44 @@ const PlayContextProvider = (props) => {
     setPlayStatus(false);
   };
 
-  const plaWithID = async (id) => {
-    await setTrack(songsData[id]);
-    await audioRef.current.play();
-    setPlayStatus(true);
+  const plaWithID = (id) => {
+    const song = [...songsData, ...songsDataDedicada, ...songsForYou , ...songChill].find((song) => song.id === id);
+    if (song) {
+      setTrack(song);
+      play();
+    }
   };
+  
+  
 
   const previous = async () => {
-    if (track.id > 0) {
-      await setTrack(songsData[track.id - 1]);
+    const currentIndex = songList.findIndex((s) => s.id === track.id);
+    if (currentIndex > 0) {
+      await setTrack(songList[currentIndex - 1]);
       await audioRef.current.play();
       setPlayStatus(true);
     }
   };
 
   const next = async () => {
-    if (track.id < songsData.length - 1) {
-      await setTrack(songsData[track.id + 1]);
+    const currentIndex = songList.findIndex((s) => s.id === track.id);
+    if (currentIndex < songList.length - 1) {
+      await setTrack(songList[currentIndex + 1]);
       await audioRef.current.play();
       setPlayStatus(true);
     }
   };
 
   const seekSong = async (e) => {
-    // console.log(e);
     audioRef.current.currentTime =
-      (e.nativeEvent.offsetX / seekBg.current.offsetWidth) *
-      audioRef.current.duration;
+      (e.nativeEvent.offsetX / seekBg.current.offsetWidth) * audioRef.current.duration;
   };
 
   useEffect(() => {
     setTimeout(() => {
       audioRef.current.ontimeupdate = () => {
         seekBar.current.style.width =
-          Math.floor(
-            (audioRef.current.currentTime / audioRef.current.duration) * 100
-          ) + "%";
+          Math.floor((audioRef.current.currentTime / audioRef.current.duration) * 100) + "%";
 
         const currentSeconds = Math.floor(audioRef.current.currentTime % 60);
         const currentMinutes = Math.floor(audioRef.current.currentTime / 60);
@@ -103,13 +115,10 @@ const PlayContextProvider = (props) => {
     next,
     previous,
     seekSong,
+    updateSongList, // Añadimos la función al contexto
   };
 
-  return (
-    <PlayContext.Provider value={contextValue}>
-      {props.children}
-    </PlayContext.Provider>
-  );
+  return <PlayContext.Provider value={contextValue}>{props.children}</PlayContext.Provider>;
 };
 
 export default PlayContextProvider;
