@@ -77,7 +77,7 @@ import song17 from "./jardin.mp3";
 import song18 from "./vivo.mp3";
 import song19 from "./teVi.mp3";
 import song20 from "./aMi.mp3";
-import song21 from "./loco.mp3";
+import song21 from "./Loco.mp3";
 import song22 from "./omar.mp3";
 import song23 from "./boda.mp3";
 import song24 from "./sorry.mp3";
